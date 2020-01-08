@@ -1,0 +1,589 @@
+@keyframes rotation {
+    from {
+            transform: rotate(0deg);
+    }
+    to {
+            transform: rotate(360deg);
+    }
+}
+.page {
+    min-width: 1100px;
+    /* мы ещё не умеем делать мобильную версию сайта, */
+    /* поэтому выше установлена минимальная ширина страницы */
+    max-width: 1600px;
+    /* выше установили ограничение по максимальной ширине */
+    margin: 0 auto;
+    /* выше для экранов больше 1600px отцентрировали весь контент */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+p,h2,h3,h4{
+    margin: 0;
+}
+a:hover{
+    opacity: 0.5;
+    transition: opacity .2s linear;
+}
+/*Header*/
+.header {
+    height: 100vh;
+    min-height: 600px;
+    max-height: 756px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    overflow: hidden;
+
+}
+
+.logo {
+    width: 183px;
+    height: 32px;
+    position: absolute;
+    top:30px;
+    left: 64px;
+    z-index: 10;
+
+}
+
+.header__title {
+    width: 730px;
+    font-size: 102px;
+    font-weight: bold;
+    margin-left: 64px;
+    line-height: 96px;
+    position: relative;
+    z-index: 11;
+
+
+}
+
+.header__subtitle {
+    width: 388px;
+    position: absolute;
+    bottom: 30px;
+    left: 64px;
+    z-index: 10;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.header__link {
+    text-decoration: none;
+    color: #2f80ed;
+}
+
+.header__main-illustration {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 765px;
+    height: 608px;
+    background:url(../images/two_again.png);
+    background-size: cover;
+    
+
+
+}
+
+.header__square-pic {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 568px;
+    height: 568px;
+    background-color: #2f80ed;
+    transform: rotate(-15deg);
+    animation: rotation 20s linear infinite;
+}
+
+
+/*Description*/
+.description {
+    width: 100%;
+}
+
+.two-columns {
+    display: flex;
+    padding-top: 0;
+    width: 80%;
+    margin: 100px auto 0;
+    justify-content: space-between;
+
+}
+.two-columns__brief {
+   font-size: 18px;
+   line-height: 1.2;
+   color:#2f80ed;
+   width: 175px;
+   font-weight: normal;
+
+
+}
+
+.two-columns__main-text {
+    width: 80%;
+    min-width: 784px;
+
+
+}
+
+.two-columns__paragrah-one {
+    padding-bottom: 30px;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.two-columns_span-bold {
+    font-weight: bold;
+}
+.two-columns__paragrah-two {
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+    padding-bottom: 30px;
+}
+
+.two-columns__paragrah-three {
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+/*Technics*/
+
+.cards {
+    display: flex;
+    margin: 0 auto 100px;
+    justify-content: flex-start;
+    text-align: center;
+    position: relative;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 1040px;
+
+
+}
+.cards__item {
+    margin: 60px 100px 0 0;
+    position: relative;
+    width: 240px;
+
+
+}
+
+.cards__title {
+    margin-bottom: 16px;
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cards__description {
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: normal;
+}
+.image-cards {
+    width: 160px;
+    height: 160px;
+}
+
+.cards__image {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    margin: 0 40px 43px;
+    border-radius: 50%;
+
+}
+
+/*Video*/
+
+.video__iframes {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px auto -60px;
+    width: 1050px;
+    position: relative;
+    z-index: 100;
+}
+
+.video__iframe {
+    border: 0;
+    width: 515px;
+    height: 316px;
+}
+
+.oakley {
+    background-color: #f2f2f2;
+    /* Можно лучше: Использовать отрицательные маргины лучше как можно реже, особенно для корректировки отступов. */
+    margin: 0 auto -20px;
+    position: relative;
+    z-index: 10;
+    /* Можно лучше: Не очень понятно зачем здесь рамка */
+    border: 0.1px solid #f2f2f2;
+}
+
+.two-columns_margin {
+    margin-top: 160px;
+}
+
+/*Блок Digits*/
+
+.section-title {
+    width: 60%;
+    margin: 100px auto 0;
+    line-height: 69px;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section-subtitle {
+    width: 60%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: normal;
+    margin: 20px auto 0;
+
+}
+.table {
+   display: flex;
+   width: 1100px;
+   margin: 0 auto 100px;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   position: relative;
+
+
+
+}
+.table__cell {
+    margin: 60px auto 0;
+    width: 200px;
+    min-height: 50px;
+
+
+
+}
+
+.cell-head {
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: bold;
+    margin:0;
+    padding-bottom: 20px;
+
+}
+
+.cell-text {
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: normal;
+}
+.cell-fotter {
+    padding-top:20px;
+    margin-bottom: 0px;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/* Блок feinman*/
+
+.feinman {
+    height: 100vh;
+    min-height: 790px;
+    max-height: 900px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+
+}
+.feinman__title {
+    position: absolute;
+    top: 100px;
+    z-index: 100;
+    width: 648px;
+    text-align: center;
+    line-height: 1.15;
+    font-size: 120px;
+    font-weight: bold;
+}
+
+.feinman__subtitle {
+    line-height: 51px;
+    font-size: 36px;
+    font-weight: normal;
+    position: absolute;
+    top: 450px;
+    z-index: 100;
+
+}
+
+.fainman__images {
+    width: 867px;
+    height: 637px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.feinman__link {
+    position: absolute;
+    top: 450px;
+    right: 48px;
+    line-height: 51px;
+    font-size: 36px;
+    font-weight: normal;
+
+}
+
+.feinman__link-a {
+    text-decoration: none;
+    color: #000;
+}
+
+/*Khan*/
+.khan {
+    background-color: #f2f2f2;
+
+}
+
+.khan__container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 105px;
+}
+
+.khan__autor {
+    line-height: 42px;
+    font-size: 30px;
+    font-weight: normal;
+}
+.khan__title {
+    line-height: 1.15;
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.khan__quote {
+    width: 790px;
+    margin-bottom: 36px;
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.khan__quote-autor {
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.khan__quote-autor-subline {
+    line-height: 1.15;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 68px;
+}
+
+.khan__book-container {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+
+}
+
+.khan__book-pic {
+    height: 608px;
+    width: 620px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.khan__book{
+    width: 620px
+}
+
+.khan__buy-link {
+
+    line-height: 42px;
+    font-size: 30px;
+    font-weight: normal;
+    color: #2f80ed;
+    text-decoration: none;
+}
+
+/*Блок Kaufman*/
+
+.kaufman {
+    background-color: #1F1F1F;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: -2;
+
+}
+
+.section-title_color {
+    color: white;
+    margin-top: 90px;
+}
+.section-subtitle_color {
+    color: white;
+}
+
+.table_color {
+    color: white;
+    margin: 0 auto 90px;
+
+}
+
+.table__cell-margin {
+    margin: 80px 0 0;
+}
+
+
+
+
+
+
+
+.cell-head_color {
+    color: white;
+}
+.cell-text_color {
+    color: white;
+}
+.table__cell_size {
+    width: 250px;
+ }
+
+.kaufman__triagle {
+    width: 877px;
+    height: 877px;
+    position: absolute;
+    right: -210px;
+    top:0;
+    z-index: -1;
+    animation: rotation 20s linear infinite;
+ }
+
+ /*Resources*/
+ .resources {
+    width: 100%;
+    position: relative;
+
+
+ }
+
+  .resources__logo-zone {
+    width: 1100px;
+    margin: 80px auto 217px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+ }
+
+ .resources__logo {
+    width: 270px;
+    height: 38px;
+    position: relative;
+}
+
+ /*Footer*/
+.footer {
+    background-color: #1F1F1F;
+    width: 100%;
+
+
+}
+.footer__columns {
+    min-height: 350px;
+    width: 90%;
+    flex-basis: 711px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+
+
+}
+.footer__column-copytight {
+    width: 50%;
+
+
+}
+
+.footer__logo {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 183px;
+    height: 35px;
+    z-index: 100;
+}
+
+.footer__autor {
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: normal;
+    color: white;
+    padding-bottom: 40px;
+}
+.footer__column-info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+
+}
+.footer__column-heading {
+    color: white;
+    padding-bottom: 20px;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer__column-links {
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: normal;
+    flex-direction: column;
+
+}
+
+.column-link {
+    color: white;
+    text-decoration: none;
+    margin:0;
+}
+.columns-link {
+    margin:0;
+    color: white;
+}
+.footer__social-icons {
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: normal;
+}
+.social-logo {
+    margin-right: 10px;
+}
